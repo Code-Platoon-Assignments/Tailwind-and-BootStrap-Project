@@ -1,0 +1,7 @@
+function DisplayCharacter (){
+    return (
+        <>
+        
+        </>
+    )
+}
