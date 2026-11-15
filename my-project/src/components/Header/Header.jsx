@@ -19,7 +19,7 @@ function MenuHeadersExample(){
 
     return (
         <>
-            <h1>HI!!!!</h1>
+            <h1>Search a rick and morty character by name below!</h1>
             {/* <Dropdown.Menu show>
                 <Dropdown.Header>Dropdown header</Dropdown.Header>
                 <Dropdown.Item eventKey="2" onClick={()=>getRicky()}>Get Ricky</Dropdown.Item>

@@ -4,7 +4,8 @@ import { useState } from 'react'
 // import viteLogo from './assets/vite.svg'
 import './App.css'
 import MenuHeadersExample from './components/Header/Header'
-import GetCharacter from './components/GetCharacter/GetCharacter'
+// import GetCharacter from './components/GetCharacter/GetCharacter'
+import DisplayCharacter from './components/DisplayCharacter/DisplayCharacter'
 
 
 function App() {
@@ -13,8 +14,8 @@ function App() {
   return (
     <>
       <MenuHeadersExample></MenuHeadersExample>
-      <GetCharacter></GetCharacter>
-      {/* <DisplayCharacter></DisplayCharacter> */}
+      {/* <GetCharacter></GetCharacter> */}
+      <DisplayCharacter></DisplayCharacter>
     </>
   )
 }
