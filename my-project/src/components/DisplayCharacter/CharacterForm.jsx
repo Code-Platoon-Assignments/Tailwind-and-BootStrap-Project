@@ -7,11 +7,18 @@ function CharacterForm( {characterList, setCharacterList} ){
     const getInfo = async(event) =>{
         event.preventDefault()
         console.log(event.target)
-        let identifier=event.target.elements.formCharacter.value
-        let info = await axios.get(`https://rickandmortyapi.com/api/character/?name=${identifier}`)
-        let nameInfo = info.data.results
-        console.log(nameInfo)
-        setCharacterList(nameInfo)
+        try{
+            let identifier=event.target.elements.formCharacter.value
+            let info = await axios.get(`https://rickandmortyapi.com/api/character/?name=${identifier}`)
+            let nameInfo = info.data.results
+            console.log(nameInfo)
+            setCharacterList(nameInfo)
+        } catch (error) {
+            console.log("Request failed:", error.message)
+            alert("No character by this name")
+        } finally {
+            console.log("Request process completed (whether error or not)")
+        }
     //     let rickDisplay = document.createElement("div")
     //     let h3 = document.createElement("h3")
     //     h3.innerText = firstRick
