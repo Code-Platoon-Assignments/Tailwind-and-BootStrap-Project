@@ -1,9 +1,9 @@
 import CharacterForm from './CharacterForm'
 
-function DisplayCharacter (){
+function DisplayCharacter ( {characterList, setCharacterList} ){
     return (
         <>
-            <CharacterForm></CharacterForm>
+            <CharacterForm characterList={characterList} setCharacterList={setCharacterList}></CharacterForm>
         </>
     )
 }
