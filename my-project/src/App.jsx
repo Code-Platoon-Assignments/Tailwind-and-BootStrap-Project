@@ -20,7 +20,6 @@ function App() {
     <>
       <MenuHeadersExample></MenuHeadersExample>
       <Outlet />
-      {/* <GetCharacter></GetCharacter> */}
       {/* <DisplayCharacter characterList = {characterList} setCharacterList={setCharacterList}></DisplayCharacter> */}
     </>
   )
