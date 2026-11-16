@@ -1,6 +1,7 @@
-import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import axios from 'axios'
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 function CharacterForm( {characterList, setCharacterList} ){
 
@@ -54,14 +55,24 @@ function CharacterForm( {characterList, setCharacterList} ){
             </Form>
             <div className = "flex flex-row flex-wrap gap-4" id ="characterContainer">
                 {characterList.map((character)=>(
-                    <div className="size-fit border p-4" id={`${character.name}-card`} key={character.id}>
-                        <img src={character.image} alt={character.name}/>
-                        <h3>{character.name}</h3>
-                    </div>
+                    <Card style={{ width: '18rem' }} id = {character.id}>
+                        <Card.Img variant="top" src={character.image} alt={character.name}/>
+                        <Card.Body>
+                            <Card.Title>{character.name}</Card.Title>
+                            <Card.Text>
+                                {`${character.name} is status ${character.status.toLowerCase()} and of the species ${character.gender.toLowerCase()} ${character.species.toLowerCase()}, from the location ${character.location.name}`}
+                            </Card.Text>
+                            <Button variant="primary">View this character</Button>
+                        </Card.Body>
+                    </Card>
                 ))}
             </div>
         </>
     );
 }
+
+
+
+
 
 export default CharacterForm
