@@ -45,11 +45,11 @@ function CharacterForm( {characterList, setCharacterList} ){
                     Search
                 </Button>
             </Form>
-            <div className = "flex flex-row gap-4"id ="characterContainer">
+            <div className = "flex flex-row flex-wrap gap-4" id ="characterContainer">
                 {characterList.map((character)=>(
-                    <div className="size-30 border p-4" id={`${character.name}-card`} key={character.id}>
+                    <div className="size-fit border p-4" id={`${character.name}-card`} key={character.id}>
                         <img src={character.image} alt={character.name}/>
-                        <h6 className="text-xs">{character.name}</h6>
+                        <h3>{character.name}</h3>
                     </div>
                 ))}
             </div>
