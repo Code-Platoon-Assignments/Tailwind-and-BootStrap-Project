@@ -55,7 +55,7 @@ function CharacterForm( {characterList, setCharacterList} ){
             </Form>
             <div className = "flex flex-row flex-wrap gap-4" id ="characterContainer">
                 {characterList.map((character)=>(
-                    <Card style={{ width: '18rem' }} id = {character.id}>
+                    <Card style={{ width: '18rem' }} key = {character.id}>
                         <Card.Img variant="top" src={character.image} alt={character.name}/>
                         <Card.Body>
                             <Card.Title>{character.name}</Card.Title>
