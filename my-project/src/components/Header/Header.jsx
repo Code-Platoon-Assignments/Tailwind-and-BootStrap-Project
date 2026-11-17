@@ -2,7 +2,7 @@
 // import Dropdown from 'react-bootstrap/Dropdown';
 // import axios from "axios"
 
-function MenuHeadersExample(){
+function Header(){
 
     // const getRicky = async() =>{
     //     let ricks = await axios.get(`https://rickandmortyapi.com/api/character/?name=rick`)
@@ -19,7 +19,7 @@ function MenuHeadersExample(){
 
     return (
         <>
-            <h1>Search a rick and morty character by name below!</h1>
+            <h1 id="header">Rick and Morty Character Search!</h1>
             {/* <Dropdown.Menu show>
                 <Dropdown.Header>Dropdown header</Dropdown.Header>
                 <Dropdown.Item eventKey="2" onClick={()=>getRicky()}>Get Ricky</Dropdown.Item>
@@ -32,4 +32,4 @@ function MenuHeadersExample(){
     );
 }
 
-export default MenuHeadersExample;
+export default Header;
