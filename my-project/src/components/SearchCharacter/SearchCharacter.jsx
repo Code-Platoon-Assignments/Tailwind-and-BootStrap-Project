@@ -1,16 +1,35 @@
 import Form from 'react-bootstrap/Form';
 import axios from 'axios'
 import CharacterCard from './CharacterCard'
+// import { useEffect } from 'react'
+// import { useState } from 'react'
 import Button from 'react-bootstrap/Button';
 function SearchCharacter( {characterList, setCharacterList} ){
+    // const [currUrl, setCurrUrl] = useState("")
+    // const [prev, setPrev] = useState(null)
+    // const [next, setNext] = useState(null)
+
+    // useEffect(()=>grabPage("https://rickandmortyapi.com/api/character"), [])
+
+    // useEffect(async()=>{
+    //     let nextPage = await axios.get(currUrl)
+    //     setCharacterList(nextPage.data.results)
+    // }, [currUrl])
+    
+    // const grabPage = async(url) => {
+    //     let nextPage = await axios.get(url)
+    //     setCharacterList(nextPage.data.results)
+    // }
+
 
     const getInfo = async(event) =>{
         event.preventDefault()
-        console.log(event.target)
+        let identifier=event.target.nameField.value
+        console.log(event.target.nameField.value)
         try{
-            let identifier=event.target.elements.formCharacter.value
             let info = await axios.get(`https://rickandmortyapi.com/api/character/?name=${identifier}`)
             let nameInfo = info.data.results
+            console.log(info.data)
             console.log(nameInfo)
             setCharacterList(nameInfo)
         } catch (error) {
@@ -19,19 +38,24 @@ function SearchCharacter( {characterList, setCharacterList} ){
         } finally {
             console.log("Request process completed (whether error or not)")
         }
+    }
     //     let rickDisplay = document.createElement("div")
     //     let h3 = document.createElement("h3")
     //     h3.innerText = firstRick
     //     rickDisplay.appendChild(h3)
     //     const displayRick = document.getElementById("rickSpot")
     //     displayRick.appendChild(rickDisplay)
-    }
 
 
 
 
     return (
         <>
+            {/* <button disabled={!prev} onClick={setCurrUrl(prev)}>Prev</button> */}
+            {/* <button disabled={!next} onClick={setCurrUrl(next)}>Next</button> */}
+            {/* <div>
+                <CharacterCard characterList = {characterList}/>
+            </div> */}
             <Form onSubmit = {(event)=>getInfo(event)}>
                 <Form.Group className="mb-3" controlId="formCharacter">
                     <Form.Label>Search character by name</Form.Label>

@@ -3,6 +3,7 @@ import App from './App.jsx'
 import HomePage from './pages/HomePage.jsx'
 import AboutPage from './pages/AboutPage.jsx'
 import NotFoundPage from './pages/NotFoundPage.jsx'
+// import CharacterDetailsPage from './pages/CharacterDetailsPage.jsx'
 import ErrorPage from './pages/ErrorPage.jsx'
 
 const router = createBrowserRouter([
