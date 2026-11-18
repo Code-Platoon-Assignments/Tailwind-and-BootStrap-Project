@@ -3,6 +3,10 @@ import { defineConfig } from 'vite'
 import tailwindcss from "@tailwindcss/vite"
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(
+  ({ mode }) => ({
+  base: mode === 'production' ? '/Tailwind-and-BootStrap-Project/' : '/',
   plugins: [react(), tailwindcss()],
-})
+
+  })
+)
