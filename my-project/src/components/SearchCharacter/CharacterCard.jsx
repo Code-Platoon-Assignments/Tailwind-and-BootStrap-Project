@@ -1,5 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router'
 
 
 
@@ -14,7 +15,7 @@ function CharacterCard( { character } ){
                     <Card.Text>
                             {`${character.name} is status ${character.status.toLowerCase()} and of the species ${character.gender.toLowerCase()} ${character.species.toLowerCase()}, from the location ${character.location.name}`}
                     </Card.Text>
-                    <Button variant="primary">View this character</Button>
+                    <Button as={Link} to={`/character/${character.id}`}variant="primary">View this character</Button>
                 </Card.Body>
             </Card>
         </>

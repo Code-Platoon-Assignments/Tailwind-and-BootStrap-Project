@@ -9,7 +9,6 @@ function SearchCharacter( {characterList, setCharacterList} ){
     // const [prev, setPrev] = useState(null)
     // const [next, setNext] = useState(null)
 
-    // useEffect(()=>grabPage("https://rickandmortyapi.com/api/character"), [])
 
     // useEffect(async()=>{
     //     let nextPage = await axios.get(currUrl)
@@ -32,23 +31,15 @@ function SearchCharacter( {characterList, setCharacterList} ){
             console.log(info)
             let nameInfo = info.data.results 
             console.log(nameInfo)
-            // console.log(info.data)
-            // console.log(nameInfo)
             setCharacterList(nameInfo)
             console.log(characterList)
         } catch (error) {
             console.log("Request failed:", error.message)
             alert("No character by this name")
         } finally {
-            // console.log("Request process completed (whether error or not)")
+            console.log("Request process completed (whether error or not)")
         }
     }
-    //     let rickDisplay = document.createElement("div")
-    //     let h3 = document.createElement("h3")
-    //     h3.innerText = firstRick
-    //     rickDisplay.appendChild(h3)
-    //     const displayRick = document.getElementById("rickSpot")
-    //     displayRick.appendChild(rickDisplay)
 
 
 
